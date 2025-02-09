@@ -1,0 +1,103 @@
+<div class="main-content">
+    <section class="hero">
+        <h1>FULL STACK</h1>
+        <h2>DEVELOPER</h2>
+        <!-- <p>Passionate about creating intuitive and engaging user experiences.</p> -->
+    </section>
+
+    <section class="bento-grid">
+        <div class="bento-item bento-experience">
+            <h3>03<span>+</span></h3>
+            <p>Years Experience</p>
+        </div>
+
+        <div class="bento-item bento-experience">
+            <p>Stack, I use</p>
+            <div class="icons">
+                <span>🅰️ Angular</span>
+                <span>💻 C#</span>
+                <span>☕ Java</span>
+                <span>🐘 PostgreSQL</span>
+            </div>
+        </div>
+        <div class="bento-item bento-experience">
+            <h3>+3</h3>
+            <p>Years of Experience</p>
+        </div>
+        <div class="bento-item bento-experience">
+            <h3>+3</h3>
+            <p>Years of Experience</p>
+        </div>
+        <div class="bento-item bento-experience">
+            <h3>+3</h3>
+            <p>Years of Experience</p>
+        </div>
+        <div class="bento-item bento-experience">
+            <h3>+3</h3>
+            <p>Years of Experience</p>
+        </div>
+    </section>
+
+    <!-- <section class="years-experience">
+        <h1>+3</h1>
+        <p>YEARS OF EXPERIENCE</p>
+    </section>
+
+    <section class="stack">
+        <svg-angular class="tech"></svg-angular>
+        <svg-csharp class="tech"></svg-csharp>
+    </section> -->
+
+    <!-- Otras secciones como "About", "Projects", etc. -->
+    <section class="experience-zone">
+        <section class="experience">
+            <i class="fa-solid fa-rotate rollback-icon" (click)="swapColors()" [class.rotated]="swapped"></i>
+
+            <h1 #header1 class="title experience-title">EXPERIENCE</h1>
+            <h2 #header2 class="title education-title">EDUCATION</h2>
+        </section>
+
+        <div *ngIf="!swapped" class="new-timeline">
+            <div *ngFor="let exp of experiences; let i = index"
+                class="timeline-element animate__animated animate__fadeInLeft"
+                [style.animationDelay]="(i * 0.38) + 's'">
+                <!-- LOGO EMPRESA -->
+                <div class="timeline-element-logo">
+                    <div class="img-container">
+                        <a [href]="exp.link" target="_blank">
+                            <img [src]="exp.logo" [alt]="exp.company">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- INFORMACIÓN DE LA EXPERIENCIA -->
+                <div class="timeline-element-container">
+                    <h3>{{ exp.company }}</h3>
+                    <p>{{ exp.role }}</p>
+                    <p class="dates">{{ exp.dates }}</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div *ngIf="swapped" class="new-timeline" [ngClass]="{ 'rollback-active': swapped }">
+            <div *ngFor="let edu of educations; let i = index"
+                class="timeline-element animate__animated animate__fadeInLeft"
+                [style.animationDelay]="(i * 0.38) + 's'">
+                <!-- LOGO EMPRESA -->
+                <div class="timeline-element-logo">
+                    <div class="img-container">
+                        <img [src]="edu.logo" [alt]="edu.title">
+                    </div>
+                </div>
+
+                <!-- INFORMACIÓN DE LA EXPERIENCIA -->
+                <div class="timeline-element-container">
+                    <h3>{{ edu.title }}</h3>
+                    <p>{{ edu.center }}</p>
+                    <p class="dates">{{ edu.dates }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

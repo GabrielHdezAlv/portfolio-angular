@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0px;
+    margin: 0px;
+
+
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #fff0;
+}
+
+/* Establecer la fuente principal del sitio */
+body {
+    font-family: 'Lora', serif;
+    color: #ffffff; // Texto blanco para el fondo oscuro
+    background-color: #0d0d0d; // Fondo oscuro elegante
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Títulos con Montserrat */
+h1,
+h2,
+h3,
+.first-name,
+.last-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Ajuste para el nombre grande */
+.first-name,
+.last-name {
+    font-size: clamp(8rem, 12vw, 15rem);
+}
+
+/* Ajuste para subtítulos */
+h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Párrafos con Lora */
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 400;
+    max-width: 800px; // Limitar el ancho para mejor lectura
+}

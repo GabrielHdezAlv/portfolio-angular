@@ -1,0 +1,384 @@
+.main-content {
+    padding: 2rem;
+    width: 100%;
+    padding-top: 160px;
+    overflow-x: hidden;
+}
+
+.experience,
+.stack {
+    margin-bottom: 5rem;
+}
+
+.hero {
+    margin-bottom: 2rem;
+}
+
+.hero,
+.experience {
+
+    h1,
+    h2 {
+        font-size: 70px;
+    }
+
+    h2 {
+        color: rgba(182, 180, 189, 0.2);
+        margin-bottom: 0px;
+    }
+
+    p {
+        width: 380px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #998f8f;
+    }
+}
+
+.bento-grid {
+    display: grid;
+    // border: 1px solid white;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+
+    .bento-item {
+        background: #161616;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        color: white;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .bento-experience {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h3 {
+            text-align: left;
+            font-size: 70px;
+            margin: 0;
+            background: linear-gradient(to bottom, white, black);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            span {
+                font-size: 60px;
+                font-weight: 400;
+                background: linear-gradient(to bottom, white, blue);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        p {
+            width: 120px;
+            font-size: 13px;
+            font-weight: 600 !important;
+            background-color: #1e1e1e;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            /* Blanco con 30% de opacidad */
+            padding: 5px;
+            border-radius: 12px;
+        }
+    }
+
+    .bento-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(to bottom, #161616, rgb(28, 1, 133));
+    }
+}
+
+.years-experience {
+    margin-top: 100px;
+
+    h1 {
+        font-size: 70px;
+    }
+
+    p {
+        width: 90px;
+        font-size: 16px;
+        font-weight: 300 !important;
+    }
+}
+
+.stack {
+    height: 50px;
+    width: 100%;
+    margin-top: 40px;
+
+    .tech {
+        margin-right: 20px;
+    }
+}
+
+.experience {
+    margin-top: 200px;
+}
+
+/* 📌 Timeline principal */
+.timeline {
+    position: relative;
+    width: 100%;
+    height: 800px;
+}
+
+/* 📌 Cada elemento del timeline */
+.timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/* 📌 Imagen en el círculo */
+.timeline-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid red;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.timeline-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 📌 Contenido de cada experiencia */
+.timeline-content {
+    width: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* 📌 Animación hover */
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* 📌 Flecha que conecta la línea con la caja */
+.timeline-content::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    width: 15px;
+    height: 15px;
+    background: #007BFF;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+/* 📌 Texto */
+.timeline-content h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #007BFF;
+}
+
+.timeline-content h4 {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* 📌 Iconos de tecnologías */
+.tech-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.tech {
+    width: 40px;
+    height: 40px;
+    fill: gray;
+    transition: fill 0.3s ease;
+}
+
+.tech:hover {
+    fill: white;
+}
+
+/* 📌 RESPONSIVE */
+@media (max-width: 768px) {
+    .timeline {
+        width: 90%;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .timeline-content {
+        width: 80%;
+    }
+
+    .timeline-content::before {
+        display: none;
+    }
+}
+
+.experience-zone {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.experience {
+    position: relative;
+}
+
+/* 📌 Estilos del icono de rollback */
+.rollback-icon {
+    position: absolute;
+    top: 80px;
+    left: 45px;
+    font-size: 1.5rem;
+    // color: #007BFF;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* 📌 Activamos la animación cuando se hace click */
+.rollback-icon.rotated {
+    transform: rotate(180deg);
+}
+
+/* 📌 Transición de colores */
+.title {
+    transition: color 0.3s ease-in-out;
+}
+
+/* TIMELINE SECTION*/
+.new-timeline {
+    width: 100%;
+    height: 800px;
+
+    // Línea central del timeline
+    &::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 500px;
+        background: linear-gradient(to bottom, white, blue);
+        left: 46.3%;
+        transform: translateX(-50%);
+    }
+
+    &.rollback-active::before {
+        height: 350px;
+    }
+}
+
+.timeline-element {
+    width: 380px;
+    height: 80px;
+    gap: 2rem;
+    display: flex;
+    opacity: 1;
+    transform: none;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    margin-bottom: 4.5rem;
+
+    .timeline-element-logo {
+        position: relative;
+
+        .img-container {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1e293b;
+
+            a,
+            img {
+                width: 3.2rem;
+                height: 3.2rem;
+                overflow: hidden;
+                flex-shrink: 0;
+                position: relative;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .timeline-element-container {
+        flex: 1 1 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+            text-align: left;
+            font-weight: 500;
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            margin: 0;
+        }
+
+        p {
+            text-align: left;
+            font-size: 0.9378rem;
+            margin: 0;
+        }
+
+        .dates {
+            font-size: .875rem;
+            line-height: 1.25rem;
+        }
+    }
+}
+
+/* 📌 RESPONSIVE */
+@media (max-width: 768px) {
+    .new-timeline {
+        &::before {
+            left: 20px; // La línea central se mueve a la izquierda
+        }
+    }
+
+    .timeline-element {
+        width: 90%;
+        flex-direction: row !important; // Todos los elementos alineados a la izquierda
+
+        .timeline-element-logo {
+            margin-right: 1rem;
+        }
+
+        .timeline-element-container {
+            align-items: flex-start !important;
+        }
+    }
+}
+
+.animate__fadeInLeft {
+    animation-duration: 0.3s !important;
+    /* Reduce la duración */
+}

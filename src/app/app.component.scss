@@ -1,0 +1,25 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #0d0d0d;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 400px;
+    padding-right: 400px
+}
+
+app-sidebar {
+    width: 650px;
+}
+
+app-main-content {
+    width: 1200px;
+}
