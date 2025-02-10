@@ -12,14 +12,14 @@ body {
 .app-container {
     display: flex;
     flex-direction: row;
-    padding-left: 400px;
-    padding-right: 400px
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 app-sidebar {
-    width: 650px;
+    width: 35%;
 }
 
 app-main-content {
-    width: 1200px;
+    width: 65%;
 }
